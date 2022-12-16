@@ -24,3 +24,31 @@ if [ $resto -eq 0 ]
     else 
         echo "Es impar"
 fi
+
+==============================================================================
+
+#!/bin/bash
+read -p "Introduce una nota: " nota
+if [ $nota -lt 5 ] && [ $nota -gt 0 ]
+then 
+echo "Suspendido"
+else 
+if [ $nota -lt 6 ]
+then 
+echo "Aprobado"
+else 
+if [ $nota -lt 7 ]
+then
+echo "Bien"
+else
+if [ $nota -gt 6 ] && [ $nota -lt 9 ] 
+then
+echo "Notable"
+else 
+echo "Excelente"
+fi
+fi
+fi
+fi
+
+
