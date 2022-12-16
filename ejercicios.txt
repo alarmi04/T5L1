@@ -106,3 +106,38 @@ else
 fi
 
 echo "El cost total es de $cost euros."
+
+==============================================================================
+
+#!/bin/bash
+
+read -p "Introduce un dia del mes (1-30)" dia
+
+while [ $dia -lt 1 ] || [ $dia -gt 30 ]
+do
+  read -p "Introduce un dia del mes (1-30)" dia
+done
+
+setmana=$(((dia-1)%7+1))
+
+if [ $setmana -eq 1 ]
+then
+  echo "El dia introduit es dilluns."
+elif [ $setmana -eq 2 ]
+then
+  echo "El dia introduit es dimarts."
+elif [ $setmana -eq 3 ]
+then
+  echo "El dia introduit es dimecres."
+elif [ $setmana -eq 4 ]
+then
+  echo "El dia introduit es dijous."
+elif [ $setmana -eq 5 ]
+then
+  echo "El dia introduit es divendres."
+elif [ $setmana -eq 6 ]
+then
+  echo "El dia introduit es dissabte."
+else
+  echo "El dia introduit es diumenge."
+fi
