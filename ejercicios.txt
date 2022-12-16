@@ -59,3 +59,28 @@ for ((i=0; i<=$num; i++))
 do
 echo $i
 done
+
+==============================================================================
+
+#!/bin/bash
+
+suma=0
+comptador=0
+
+read -p "Introdueix valors (0 per acabar: )" v
+
+while [ $v -ne 0 ]
+do
+  suma=$((suma+v))
+  comptador=$((comptador+1))
+  read "Introdueix calors (0 per acabar): " v
+done
+
+echo "Has introduit un total de $comptador valors"
+echo "La suma total es $suma"
+
+if [ $comptador -ne 0 ]
+then
+  mitjana=$((suma/comptador))
+  echo "La mitjana es $mitjana"
+fi
