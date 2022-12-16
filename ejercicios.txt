@@ -12,3 +12,15 @@ if [ $v1 -eq $v2 ]
                 echo $v2 " es mayor que " $v1
                 fi
                 fi
+
+==============================================================================
+
+#!/bin/bash
+read -p "Introduce un numero mayor que 0: " num
+let resto=num%2
+if [ $resto -eq 0 ]
+    then
+        echo "Es par"
+    else 
+        echo "Es impar"
+fi
