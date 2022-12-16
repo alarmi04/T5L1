@@ -51,4 +51,11 @@ fi
 fi
 fi
 
+==============================================================================
 
+#!/bin/bash
+read -p "Introduce un numero mayor que 0: " num
+for ((i=0; i<=$num; i++))
+do
+echo $i
+done
