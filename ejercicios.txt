@@ -84,3 +84,25 @@ then
   mitjana=$((suma/comptador))
   echo "La mitjana es $mitjana"
 fi
+
+==============================================================================
+
+#!/bin/bash
+
+read -p "Introdueix la quantitat de litres d'aigua consumuts: " litres
+
+cost=0
+
+if [ $litres -lt 50 ]
+then
+  cost=20
+
+elif [ $litres -lt 200 ]
+then
+  cost=$((litres20))
+
+else
+  cost=$((litres10))
+fi
+
+echo "El cost total es de $cost euros."
